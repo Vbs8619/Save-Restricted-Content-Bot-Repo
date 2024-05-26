@@ -170,9 +170,9 @@ async def start_command(event):
     ]
 
     # Sending photo with caption and buttons
-    await gagan.send_file(
+    await gagan.#(
         event.chat_id,
-        file=START_PIC,
+        file=#,
         caption=TEXT,
         buttons=buttons
     )
