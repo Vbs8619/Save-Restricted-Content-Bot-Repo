@@ -157,7 +157,7 @@ async def run_batch(userbot, client, sender, countdown, link):
             return -2
 
 C = "/cancel"
-START_PIC = 
+START_PIC = #
 TEXT = "👋 Hi, This is 'Paid Restricted Content Saver' bot Made with ❤️ by __**vbs"
 
 @gagan.on(events.NewMessage(pattern=f"^{C}"))
@@ -172,7 +172,7 @@ async def start_command(event):
     # Sending photo with caption and buttons
     await gagan.send_file(
         event.chat_id,
-        file=START_PIC,
+        file=#,
         caption=TEXT,
         buttons=buttons
     )
