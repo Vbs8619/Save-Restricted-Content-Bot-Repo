@@ -7,17 +7,6 @@ Contact: [Telegram](https://t.me/devggn)
 ## Try Live Bot
 Bot link -https://t.me/advance_content_saver_bot
 
-## Update: 28th May 2024
-- in `batch.py`, `.json` method implemented for saving batch details on `/batch` command. 
-- `cancel` command fixed to clear the batch details and stop further processing.
-- `/dl` command added to download videos from `youtube`, `pinterest`, `linkedin`, `internet archive`, `amazon mini tv`, `xvi..deos`, `xn..xx` sites.
-- `set` and `remt` callback handlers removed now you have to send pic directly to set it as thumbnail and `/remthumb` to remove to thumbnail.
-- `/logs` command added to get the logs directly on telegram (now upto 2 min you can increase it accordingly)
-- `/help` command added
-- Private topic groups are now supported, single link (for batch processing modify code by yourself)
-- fixed peer id invalid error for some channel which do not support `-100` as prefix, use `/invalid` command to deal with this error (not fully resolved yet)
-- Contact us on Telegram and request new changes and report bugs.
-
 ### A stable telegram bot to get restricted messages with custom thumbnail support , made by [TEAM SPY](https://t.me/devggn) This bot can run in channels directly (in this case custom thumbnail not supported)
 
 - works for both public and private chats
@@ -97,12 +86,18 @@ python3 -m main
 - Click on  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
  
 » Method - 2:
-- Star the repo, and fork it in desktop mode
+- Star the repo, rate and fork it in desktop mode
 - create app in heroku
 - go to settings of ```app›› config vars››``` add all variables
 - add buildpacks
 - connect to github and deploy
 - turn on dynos
+- Note: you must add buildpack in heroku to get the original video thumbnail and to remove already set thumbnail otherwise you will get black video
+<b> How to add? </b>
+- Go to heroku settings
+- scroll down and click add buildpack
+- now paste following link i.e `https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git` in input bar and click add buildpack
+- Now go back and redeploy
 
 # Editing Repo - [TEAM SPY](https://t.me/devggn)
 
@@ -129,3 +124,20 @@ change accordingly within ```f""```
 
 # Terms of USE / Modification 
 Visit [Terms](https://github.com/devgaganin/Save-Restricted-Content-Bot-Repo/blob/main/TERMS_OF_USE.md) and accept the guidelines.
+
+# Updates
+
+## Update: 6th June 2024
+- Fixed Peer ID Invalid Error
+- Removed `invalid` command handler as it is not needed anymore
+- Added `speedboost.py` (dem)
+## Update: 28th May 2024
+- in `batch.py`, `.json` method implemented for saving batch details on `/batch` command. 
+- `cancel` command fixed to clear the batch details and stop further processing.
+- `/dl` command added to download videos from `youtube`, `pinterest`, `linkedin`, `internet archive`, `amazon mini tv`, `xvi..deos`, `xn..xx` sites.
+- `set` and `remt` callback handlers removed now you have to send pic directly to set it as thumbnail and `/remthumb` to remove to thumbnail.
+- `/logs` command added to get the logs directly on telegram (now upto 2 min you can increase it accordingly)
+- `/help` command added
+- Private topic groups are now supported, single link (for batch processing modify code by yourself)
+- fixed peer id invalid error for some channel which do not support `-100` as prefix, use `/invalid` command to deal with this error (not fully resolved yet)
+- Contact us on Telegram and request new changes and report bugs.
