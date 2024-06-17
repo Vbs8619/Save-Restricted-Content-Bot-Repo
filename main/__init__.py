@@ -7,12 +7,10 @@ from telethon.sync import TelegramClient
 
 from decouple import config
 import logging, time, sys
-
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("telethon").setLevel(logging.WARNING)
-
 
 # variables
 API_ID = config("API_ID", default=None, cast=int)
@@ -48,6 +46,6 @@ Bot = Client(
 try:
     Bot.start()
 except Exception as e:
-    #print(e)
-    logger.info(e)
+    # print(e)
+    # logger.info(e)
     sys.exit(1)
